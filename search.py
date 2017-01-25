@@ -69,8 +69,12 @@ if __name__ == '__main__':
         sys.exit()
     keywords = sys.argv[1].strip()
     proposals = search(keywords)
-    for p in proposals:
-        printProposal(p)
+    if proposals:
+        for p in proposals:
+            printProposal(p)
+            print
+    else:
+        print('No proposal found')
         print
 
     printAvgPercFunded(proposals)
