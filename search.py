@@ -73,12 +73,12 @@ if __name__ == '__main__':
         for p in proposals:
             printProposal(p)
             print
+
+        printAvgPercFunded(proposals)
+        printAvgNumOfDonors(proposals)
+        printAvgCostToComplete(proposals)
+        printAvgNumOfStudents(proposals)
+        printAvgTotalPrice(proposals)
     else:
         print('No proposal found')
         print
-
-    printAvgPercFunded(proposals)
-    printAvgNumOfDonors(proposals)
-    printAvgCostToComplete(proposals)
-    printAvgNumOfStudents(proposals)
-    printAvgTotalPrice(proposals)
