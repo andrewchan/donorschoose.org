@@ -38,12 +38,15 @@ def getAvg(item, proposals):
     count = 0
     sum = 0
 
-    for p in proposals:
-        if item in p:
-            count += 1
-            sum += float(p[item])
+    if proposals:
+        for p in proposals:
+            if item in p:
+                count += 1
+                sum += float(p[item])
 
-    return sum / count
+        return sum / count
+    else:
+        return 0
 
 def printAvgPercFunded(proposals):
     print('Average Percent Funded: %s' % str(getAvg('percentFunded', proposals)))
